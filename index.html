@@ -51,8 +51,8 @@ ul{list-style:none}
 #cursor{display:none}
 #cursor-dot{position:fixed;z-index:9000;pointer-events:none;width:3px;height:18px;background:var(--red);transform:translate(-50%,-50%);transition:transform .03s;box-shadow:0 0 6px var(--red)}
 #cursor-dot::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:18px;height:3px;background:var(--red);box-shadow:0 0 6px var(--red)}
-
-/* ── BOOT SEQUENCE ──────────────────────────────── */
+@media(hover:none),(pointer:coarse){#cursor-dot{display:none}}
+  
 #boot{position:fixed;inset:0;z-index:10000;background:#000;display:flex;align-items:center;justify-content:center;font-family:var(--mono)}
 #boot.done{animation:boot-out .4s ease forwards .2s}
 @keyframes boot-out{to{opacity:0;visibility:hidden;pointer-events:none}}
